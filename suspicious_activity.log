@@ -1,0 +1,16 @@
+2024-08-24 16:09:25,489 - INFO - Suspicious pattern detected: <script> in query: <script>
+2024-08-24 16:09:25,489 - INFO - 127.0.0.1 - - [24/Aug/2024 16:09:25] "[31m[1mGET /?query=<script> HTTP/1.1[0m" 400 -
+2024-08-24 16:09:26,084 - INFO - Suspicious pattern detected: <script> in query: <script>
+2024-08-24 16:09:26,084 - INFO - 127.0.0.1 - - [24/Aug/2024 16:09:26] "[31m[1mGET /?query=<script> HTTP/1.1[0m" 400 -
+2024-08-24 16:09:26,630 - INFO - Suspicious pattern detected: <script> in query: <script>
+2024-08-24 16:09:26,630 - INFO - 127.0.0.1 - - [24/Aug/2024 16:09:26] "[31m[1mGET /?query=<script> HTTP/1.1[0m" 400 -
+2024-08-24 16:09:51,105 - INFO - Suspicious pattern detected: DROP TABLE in query: DROP TABLES
+2024-08-24 16:09:51,105 - INFO - 127.0.0.1 - - [24/Aug/2024 16:09:51] "[31m[1mGET /?query=DROP%20TABLES HTTP/1.1[0m" 400 -
+2024-08-24 16:09:51,994 - INFO - Suspicious pattern detected: DROP TABLE in query: DROP TABLES
+2024-08-24 16:09:51,995 - INFO - 127.0.0.1 - - [24/Aug/2024 16:09:51] "[31m[1mGET /?query=DROP%20TABLES HTTP/1.1[0m" 400 -
+2024-08-24 16:10:08,972 - INFO - 127.0.0.1 - - [24/Aug/2024 16:10:08] "GET /?query=list HTTP/1.1" 200 -
+2024-08-24 16:10:09,809 - INFO - 127.0.0.1 - - [24/Aug/2024 16:10:09] "GET /?query=list HTTP/1.1" 200 -
+2024-08-24 16:10:25,943 - INFO -  * Detected change in 'app.py', reloading
+2024-08-24 16:10:25,998 - INFO -  * Restarting with stat
+2024-08-24 16:10:26,264 - WARNING -  * Debugger is active!
+2024-08-24 16:10:26,268 - INFO -  * Debugger PIN: 141-889-257
