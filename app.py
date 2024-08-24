@@ -1,6 +1,16 @@
 from flask import Flask, request, jsonify
+import logging
 
 app = Flask(__name__)
+
+# Configure logging
+logging.basicConfig(
+    filename='suspicious_activity.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+logger = logging.getLogger()
 
 # Liste de chaînes suspectes
 SUSPECT_PATTERNS = [
@@ -22,12 +32,21 @@ SUSPECT_PATTERNS = [
 # if "DROP TABLE" in req.args.get('query', ''):
 
 def is_suspicious_request(req):
-    query_string = req.args.get('query', '')
-    print("SUSPECT_PATTERNS:", SUSPECT_PATTERNS)
-    print("query_string:", query_string)
-    if any(pattern in query_string for pattern in SUSPECT_PATTERNS):
-        return True
+    # query_string = req.args.get('query', '')    
+    # if any(pattern in query_string for pattern in SUSPECT_PATTERNS):
+    #     logger.info(f"Suspicious pattern detected: {pattern} in query: {query_string}")
+    #     return True
+    # return False
+
+
+    query_string = req.args.get('query', '')  
+    for pattern in SUSPECT_PATTERNS:
+        if pattern in query_string:
+            logger.info(f"Suspicious pattern detected: {pattern} in query: {query_string}")
+            return True
     return False
+
+
 
 @app.before_request
 def check_request():
